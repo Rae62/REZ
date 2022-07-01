@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:rez/account/Historique/restoCard.dart';
 
 class OrderHistory extends StatefulWidget {
-  const OrderHistory({Key? key}) : super(key: key);
-
   @override
   State<OrderHistory> createState() => _OrderHistoryState();
 }
