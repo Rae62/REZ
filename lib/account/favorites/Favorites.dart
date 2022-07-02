@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rez/account/favorites/favorite_card.dart';
 import 'package:rez/models/todoModel.dart';
+import 'package:rez/outSourcing/navArrow.dart';
 import 'package:rez/data/data-favoris.dart' as data;
 
 class Favorites extends StatefulWidget {
@@ -20,32 +21,7 @@ class _FavoritesState extends State<Favorites> with TickerProviderStateMixin {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 150, 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.arrow_back),
-                    onPressed: () {},
-                    color: Colors.black,
-                    iconSize: 30.0,
-                  ),
-                  Container(
-                    child: Text(
-                      "Favoris",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 0, 0, 0),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+                Arrow(arrowText: 'Favoris'),
             Container(
               child: TabBar(
                   labelColor: Color.fromARGB(255, 239, 113, 90),

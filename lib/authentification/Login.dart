@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:rez/outSourcing/button.dart';
+import 'package:rez/outSourcing/navArrow.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -45,32 +47,7 @@ class _LoginState extends State<Login> {
           child: Center(
             child: Column(
               children: [
-                Container(
-                  margin: EdgeInsets.fromLTRB(0, 0, 120, 140),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      IconButton(
-                        icon: Icon(Icons.arrow_back),
-                        onPressed: () {},
-                        color: Colors.black,
-                        iconSize: 30.0,
-                      ),
-                      Container(
-                        child: Text(
-                          "Login",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(255, 0, 0, 0),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+         Arrow(arrowText: 'Connexion'),
                 Container(
                   margin: EdgeInsets.fromLTRB(0, 0, 0, 18),
                   child: TextField(
@@ -130,48 +107,8 @@ class _LoginState extends State<Login> {
                     ],
                   ),
                 ),
-                Container(
-                  child: ElevatedButton(
-                    onPressed: () => {},
-                    child: Text(
-                      'Se connecter',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20.0,
-                      ),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                        shape: new RoundedRectangleBorder(
-                          borderRadius: new BorderRadius.circular(10.0),
-                        ),
-                        primary: Color.fromARGB(255, 239, 113, 90),
-                        minimumSize: Size(400, 50)),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                  child: ElevatedButton(
-                    onPressed: () => {},
-                    child: Text(
-                      'Mot de passe oublié',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 239, 113, 90),
-                        fontSize: 20.0,
-                      ),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      shape: new RoundedRectangleBorder(
-                        side: BorderSide(
-                          width: 2.0,
-                          color: Color.fromARGB(255, 239, 113, 90),
-                        ),
-                        borderRadius: new BorderRadius.circular(10.0),
-                      ),
-                      primary: Colors.white,
-                      fixedSize: const Size(400, 50),
-                    ),
-                  ),
-                ),
+                Button(buttonText: 'Se connecter'),
+                 Button(buttonText: 'Mot de passe oublié'),
               ],
             ),
           ),

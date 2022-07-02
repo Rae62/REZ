@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:rez/outSourcing/button.dart';
 
 class AddCard extends StatelessWidget {
   @override
@@ -26,9 +27,8 @@ class AddCard extends StatelessWidget {
         margin: const EdgeInsets.fromLTRB(30, 200, 30, 0),
         child: Column(
           children: [
-
             Flexible(
-              // ----------------- input du numero de carte bancaire 
+              // ----------------- input du numero de carte bancaire
               child: TextField(
                 // clavier de type numérique
                 keyboardType: TextInputType.number,
@@ -83,7 +83,7 @@ class AddCard extends StatelessWidget {
                   ),
 
                   Flexible(
-                    // ----------------- input du cvc 
+                    // ----------------- input du cvc
                     child: TextField(
                       keyboardType: TextInputType.number,
                       inputFormatters: [
@@ -105,25 +105,7 @@ class AddCard extends StatelessWidget {
                 ],
               ),
             ),
-
-            // -------------------bouton enregistrer 
-            ElevatedButton(
-              onPressed: () => {},
-              child: Text(
-                'Enregistrer',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 22.0,
-                ),
-              ),
-              style: ElevatedButton.styleFrom(
-                  shape: new RoundedRectangleBorder(
-                    borderRadius: new BorderRadius.circular(10.0),
-                  ),
-                  primary: Color.fromARGB(255, 239, 113, 90),
-                  minimumSize: Size(400, 50)),
-            ),
-
+            Button(buttonText: 'Enregistrer'),
           ],
         ),
       ),

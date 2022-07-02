@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:rez/outSourcing/button.dart';
+import 'package:rez/outSourcing/navArrow.dart';
 
 class SendEmail extends StatefulWidget {
   @override
@@ -39,26 +41,15 @@ class _SendEmailState extends State<SendEmail> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 234, 232, 232),
-      appBar: AppBar(
-          elevation: 0,
-          backgroundColor: Color.fromARGB(255, 234, 232, 232),
-          shadowColor: Colors.grey,
-          title: Text(
-            "Mot de passe oublié",
-            style: TextStyle(color: Colors.black),
-          ),
-          iconTheme: IconThemeData(
-            color: Colors.black,
-          ),
-          centerTitle: true),
       body: Center(
         child: Container(
           padding: EdgeInsets.all(32),
           child: Center(
             child: Column(
               children: [
+                Arrow(arrowText: 'Mot de passe oublié'),
                 Container(
-                  margin: EdgeInsets.fromLTRB(0, 200, 0, 20),
+                  margin: EdgeInsets.only(top: 80),
                   child: TextField(
                       controller: username,
                       style: TextStyle(fontSize: 20),
@@ -70,22 +61,7 @@ class _SendEmailState extends State<SendEmail> {
                         focusedBorder: myfocusborder(),
                       )),
                 ),
-                ElevatedButton(
-                  onPressed: () => {},
-                  child: Text(
-                    'Valider',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 22.0,
-                    ),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                      shape: new RoundedRectangleBorder(
-                        borderRadius: new BorderRadius.circular(10.0),
-                      ),
-                      primary: Color.fromARGB(255, 239, 113, 90),
-                      minimumSize: Size(400, 50)),
-                ),
+                Button(buttonText: 'Valider'),
               ],
             ),
           ),

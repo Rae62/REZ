@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:rez/restaurant/oneWidgetResto.dart';
 
 import '../../models/declarationValues.dart';
 import 'package:rez/data/data.dart' as data;
 
-class CallWidgetResto extends StatefulWidget {
+import '../list/OneWidgetEvent.dart';
+
+class CallWidgetEvent extends StatefulWidget {
   final List<ToDo> tovisit = data.tovisit;
 
   @override
-  State<CallWidgetResto> createState() => _CallWidgetRestoState();
+  State<CallWidgetEvent> createState() => _CallWidgetEventState();
 }
 
-class _CallWidgetRestoState extends State<CallWidgetResto> {
+class _CallWidgetEventState extends State<CallWidgetEvent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class _CallWidgetRestoState extends State<CallWidgetResto> {
           backgroundColor: Color.fromARGB(255, 247, 246, 248),
           shadowColor: Colors.grey,
           title: Text(
-            "Liste des restaurants",
+            "Liste des évènements",
             style: TextStyle(color: Colors.black),
           ),
           iconTheme: IconThemeData(
@@ -31,7 +31,7 @@ class _CallWidgetRestoState extends State<CallWidgetResto> {
           centerTitle: true),
       body: ListView.builder(
           itemBuilder: (context, index) {
-            return OneWidgetResto(
+            return OneWidgetEvent(
               todo: widget.tovisit[index],
             );
           },

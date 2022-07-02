@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:rez/outSourcing/button.dart';
+import 'package:rez/outSourcing/navArrow.dart';
 
 class CommentPage extends StatefulWidget {
   @override
@@ -41,34 +43,12 @@ class _CommentPageState extends State<CommentPage> {
         padding: EdgeInsets.all(32),
         child: Column(
           children: <Widget>[
-            Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 120, 30),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.arrow_back),
-                    onPressed: () {},
-                    color: Colors.black,
-                    iconSize: 30.0,
-                  ),
-                  Container(
-                    child: Text(
-                      "Commentaires",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 0, 0, 0),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+            Arrow(arrowText: 'Commentaires'),
+            SizedBox(
+              height: 20,
             ),
             Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 0, 18),
+              margin: EdgeInsets.only(bottom: 20),
               child: SizedBox(
                 width: width / 1.2,
                 child: TextField(
@@ -80,7 +60,7 @@ class _CommentPageState extends State<CommentPage> {
                     fillColor: Color.fromARGB(255, 213, 218, 222),
                     filled: true,
                     labelText: "Inserez votre commentaire ici",
-                    contentPadding: const EdgeInsets.symmetric(vertical: 50),
+                    contentPadding: const EdgeInsets.fromLTRB(10, 50, 10, 50),
                     border: myinputborder(),
                     enabledBorder: myinputborder(),
                     focusedBorder: myfocusborder(),
@@ -88,24 +68,9 @@ class _CommentPageState extends State<CommentPage> {
                 ),
               ),
             ),
-            Container(
-              margin: EdgeInsets.fromLTRB(230, 0, 0, 18),
-              child: ElevatedButton(
-                onPressed: () => {},
-                child: Text(
-                  'Envoyer',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 12.0,
-                  ),
-                ),
-                style: ElevatedButton.styleFrom(
-                    shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(10.0),
-                    ),
-                    primary: Color.fromARGB(255, 239, 113, 90),
-                    minimumSize: Size(30, 30)),
-              ),
+            Button(buttonText: 'Envoyer'),
+            SizedBox(
+              height: 20,
             ),
             Container(
               margin: EdgeInsets.fromLTRB(0, 0, 0, 30),
@@ -138,6 +103,9 @@ class _CommentPageState extends State<CommentPage> {
                                 },
                               ),
                             ],
+                          ),
+                          SizedBox(
+                            height: 5,
                           ),
                           SizedBox(
                             width: width / 1.2,
@@ -197,6 +165,9 @@ class _CommentPageState extends State<CommentPage> {
                                 },
                               ),
                             ],
+                          ),
+                          SizedBox(
+                            height: 5,
                           ),
                           SizedBox(
                             width: width / 1.2,

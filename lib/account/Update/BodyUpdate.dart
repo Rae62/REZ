@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rez/outSourcing/button.dart';
 
 class BodyUpdate extends StatelessWidget {
   const BodyUpdate({Key? key}) : super(key: key);
@@ -78,6 +79,7 @@ class _ProfileMenuState extends State<ProfileMenu> {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.only(top: 25),
+        
         child: ListView(
           scrollDirection: Axis.vertical,
           shrinkWrap: true,
@@ -106,17 +108,7 @@ class _ProfileMenuState extends State<ProfileMenu> {
                           image: NetworkImage(
                               'https://images.unsplash.com/photo-1438761681033-6461ffad8d80'))),
                 ),
-                Container(
-                  margin: const EdgeInsets.only(top: 150),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: const Text('Modifier la photo'),
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          Color.fromARGB(255, 239, 113, 90)),
-                    ),
-                  ),
-                ),
+                Button(buttonText: 'Modifier la photo'),
                 SizedBox(
                   height: 200,
                 ),
@@ -139,26 +131,9 @@ class _ProfileMenuState extends State<ProfileMenu> {
                 Text('Mot de passe'),
                 passwordText,
                 SizedBox(height: 15),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text('Modifier les informations'),
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
-                        Color.fromARGB(255, 239, 113, 90)),
-                  ),
-                ),
+                Button(buttonText: 'Modifier les informations'),
                 SizedBox(height: 15),
-                ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Supprimer mon compte',
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      side:
-                          BorderSide(color: Color.fromARGB(255, 239, 113, 90)),
-                      primary: Colors.black,
-                      textStyle: TextStyle(color: Colors.amber),
-                    )),
+                Button(buttonText: 'Supprimer mon compte'),
               ],
             ),
           ],

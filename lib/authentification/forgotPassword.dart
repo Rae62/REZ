@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:rez/outSourcing/button.dart';
 import '../../models/declarationValues.dart';
 import 'package:rez/data/data.dart' as data;
 
-class forgotPassword extends StatefulWidget {
+class ForgotPassword extends StatefulWidget {
   final List<ToDo> tovisit = data.tovisit;
 
   @override
-  State<forgotPassword> createState() => _forgotPasswordState();
+  State<ForgotPassword> createState() => _ForgotPasswordState();
 }
 
 OutlineInputBorder myinputborder() {
@@ -31,7 +32,7 @@ OutlineInputBorder myfocusborder() {
       ));
 }
 
-class _forgotPasswordState extends State<forgotPassword> {
+class _ForgotPasswordState extends State<ForgotPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -106,25 +107,7 @@ class _forgotPasswordState extends State<forgotPassword> {
                   ),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(top: 20),
-                child: ElevatedButton(
-                  onPressed: () => {},
-                  child: Text(
-                    'Valider',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 22.0,
-                    ),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                      shape: new RoundedRectangleBorder(
-                        borderRadius: new BorderRadius.circular(10.0),
-                      ),
-                      primary: Color.fromARGB(255, 239, 113, 90),
-                      minimumSize: Size(400, 50)),
-                ),
-              ),
+             Button(buttonText: 'Valider'),
             ],
           ),
         ),

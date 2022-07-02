@@ -4,10 +4,9 @@ import 'package:rez/account/Historique/orderHistory.dart';
 import 'package:rez/account/Paiement/payment.dart';
 import 'package:rez/account/Update/UpdateScreen.dart';
 import 'package:rez/additionalData/faq/faqList.dart';
-import 'package:rez/additionalData/mentions_l%C3%A9gales/mentionslist.dart';
+import 'package:rez/additionalData/mentions_légales/mentionslist.dart';
 
 class BodyProfile extends StatelessWidget {
-  const BodyProfile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

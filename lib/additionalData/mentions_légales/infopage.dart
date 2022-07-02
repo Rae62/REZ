@@ -1,46 +1,39 @@
 import 'package:flutter/material.dart';
 
-
-
 class InfoPage extends StatelessWidget {
   final info;
 
-const InfoPage ({
-  Key? key,
-  required this.info,
-}) : super(key: key);
+  const InfoPage({
+    required this.info,
+  });
 
-@override 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-          margin: const EdgeInsets.fromLTRB(30, 30, 30, 30),
-          child: Column(
-            children: <Widget> [
-              Image.network(
-                info.urlImage,
-                height: 200,
+        body: Container(
+            margin: const EdgeInsets.fromLTRB(30, 30, 30, 30),
+            child: Column(
+              children: <Widget>[
+                Image.network(
+                  info.urlImage,
+                  height: 200,
                 ),
                 Padding(
-                  padding: EdgeInsets.all(15), 
-                  child: Text(  
+                  padding: EdgeInsets.all(15),
+                  child: Text(
                     info.titre,
                     style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
                   ),
-                ), 
                 ),
-              Text(
-                info.texte,
-                textAlign: TextAlign.justify,
-                style: const TextStyle(
-                  fontSize: 14,
-                )
-              ),
-            ],
-          )
-      )
-    );
+                Text(info.texte,
+                    textAlign: TextAlign.justify,
+                    style: const TextStyle(
+                      fontSize: 14,
+                    )),
+              ],
+            )));
   }
 }

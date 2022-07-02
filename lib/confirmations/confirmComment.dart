@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:rez/outSourcing/bottomBar.dart';
+import 'package:rez/outSourcing/navArrow.dart';
 
 class CommentConfirm extends StatefulWidget {
   @override
@@ -22,35 +23,7 @@ class _CommentConfirmState extends State<CommentConfirm> {
           child: Center(
             child: Column(
               children: [
-                Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: <Widget>[
-                      IconButton(
-                        icon: Icon(Icons.arrow_back),
-                        onPressed: () {},
-                        color: Colors.black,
-                        iconSize: 30.0,
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(0, 270, 0, 0),
-                  child: SizedBox(
-                    width: 80,
-                    height: 80,
-                    child: FloatingActionButton(
-                      backgroundColor: Color.fromARGB(255, 253, 64, 89),
-                      onPressed: () {},
-                      child: Icon(
-                        Icons.check,
-                        size: 80,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
+Arrow(arrowText: 'Mot de passe oublié'),
                 Container(
                   margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
                   child: Text(

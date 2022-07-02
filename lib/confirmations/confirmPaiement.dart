@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rez/outSourcing/bottomBar.dart';
+import 'package:rez/outSourcing/button.dart';
 
 class ConfirmPaiement extends StatefulWidget {
   @override
@@ -44,7 +45,6 @@ class _ConfirmPaiementState extends State<ConfirmPaiement> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 20,
-                      // fontWeight: FontWeight.bold,
                       color: Color.fromRGBO(112, 112, 112, 1),
                     ),
                   ),
@@ -61,25 +61,7 @@ class _ConfirmPaiementState extends State<ConfirmPaiement> {
                     ),
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.only(top: 60),
-                  child: ElevatedButton(
-                    onPressed: () => {},
-                    child: Text(
-                      'Consulter mon historique',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 22.0,
-                      ),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                        shape: new RoundedRectangleBorder(
-                          borderRadius: new BorderRadius.circular(10.0),
-                        ),
-                        primary: Color.fromARGB(255, 239, 113, 90),
-                        minimumSize: Size(400, 50)),
-                  ),
-                ),
+                Button(buttonText: 'How are You ?'),
               ],
             ),
           ),

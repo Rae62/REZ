@@ -31,7 +31,6 @@ class OneWidgetBoisson extends StatelessWidget {
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-
               children: [
                 Text(
                   todo.name,
@@ -43,9 +42,6 @@ class OneWidgetBoisson extends StatelessWidget {
                 ),
                 Text('4.7/5 (214 votes)'),
               ],
-
-              // mainAxisAlignment: MainAxisAlignment.start,
-              // crossAxisAlignment: CrossAxisAlignment.center,
             ),
             Container(
               child: IconButton(

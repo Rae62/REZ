@@ -5,18 +5,17 @@ import 'package:rez/outSourcing/header.dart';
 import 'package:rez/outSourcing/tabBar.dart';
 
 import '../../models/declarationValues.dart';
-import 'package:rez/data/data.dart' as data;
+import '../../data/data.dart' as data;
+import 'oneWidgetPlat.dart';
 
-import 'oneWidgetDessert.dart';
-
-class CallWidgetDessert extends StatefulWidget {
+class CallWidgetPlat extends StatefulWidget {
   final List<ToDo> tovisit = data.tovisit;
 
   @override
-  State<CallWidgetDessert> createState() => _CallWidgetDessertState();
+  State<CallWidgetPlat> createState() => _CallWidgetPlatState();
 }
 
-class _CallWidgetDessertState extends State<CallWidgetDessert>
+class _CallWidgetPlatState extends State<CallWidgetPlat>
     with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
@@ -34,7 +33,7 @@ class _CallWidgetDessertState extends State<CallWidgetDessert>
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
-                    return OneWidgetDessert(
+                    return OneWidgetPlat(
                       todo: widget.tovisit[index],
                     );
                   },

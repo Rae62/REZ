@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rez/outSourcing/button.dart';
 import 'package:rez/outSourcing/delayed_animation.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -48,12 +49,8 @@ class WelcomePage extends StatelessWidget {
                   alignment: Alignment.bottomCenter,
                   width: double.infinity,
                   height: 400,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        shape: StadiumBorder(), padding: EdgeInsets.all(13)),
-                    child: Text('GET STARTED'),
-                    onPressed: () {},
-                  ),
+                  child:
+                    Button(buttonText: 'GET STARTED'),
                 ),
               ),
             ],

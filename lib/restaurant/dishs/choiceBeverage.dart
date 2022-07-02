@@ -7,21 +7,23 @@ import 'package:rez/outSourcing/tabBar.dart';
 import '../../models/declarationValues.dart';
 import 'package:rez/data/data.dart' as data;
 
-import 'oneWidgetDessert.dart';
+import 'oneWidgetBeverage.dart';
 
-class CallWidgetDessert extends StatefulWidget {
+class CallWidgetBoisson extends StatefulWidget {
   final List<ToDo> tovisit = data.tovisit;
 
   @override
-  State<CallWidgetDessert> createState() => _CallWidgetDessertState();
+  State<CallWidgetBoisson> createState() => _CallWidgetBoissonState();
 }
 
-class _CallWidgetDessertState extends State<CallWidgetDessert>
+class _CallWidgetBoissonState extends State<CallWidgetBoisson>
     with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
+    
     TabController controller =
         new TabController(initialIndex: 0, length: 4, vsync: this);
+
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 234, 232, 232),
       body: SingleChildScrollView(
@@ -34,7 +36,7 @@ class _CallWidgetDessertState extends State<CallWidgetDessert>
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
-                    return OneWidgetDessert(
+                    return OneWidgetBoisson(
                       todo: widget.tovisit[index],
                     );
                   },
