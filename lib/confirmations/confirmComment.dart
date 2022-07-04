@@ -23,7 +23,7 @@ class _CommentConfirmState extends State<CommentConfirm> {
           child: Center(
             child: Column(
               children: [
-Arrow(arrowText: 'Mot de passe oublié'),
+                NavArrow(arrowText: 'Mot de passe oublié'),
                 Container(
                   margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
                   child: Text(

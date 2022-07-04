@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:rez/outSourcing/button.dart';
+import 'package:rez/outSourcing/buttonWhite.dart';
 import 'package:rez/outSourcing/navArrow.dart';
 
 class Login extends StatefulWidget {
@@ -40,14 +41,14 @@ class _LoginState extends State<Login> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 234, 232, 232),
+      backgroundColor: Color.fromARGB(255, 247, 246, 248),
       body: Center(
         child: Container(
           padding: EdgeInsets.all(32),
           child: Center(
             child: Column(
               children: [
-         Arrow(arrowText: 'Connexion'),
+                NavArrow(arrowText: 'Connexion'),
                 Container(
                   margin: EdgeInsets.fromLTRB(0, 0, 0, 18),
                   child: TextField(
@@ -108,7 +109,8 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 Button(buttonText: 'Se connecter'),
-                 Button(buttonText: 'Mot de passe oublié'),
+                SizedBox(height: 20),
+                ButtonWhite(buttonText: 'Mot de passe oublié'),
               ],
             ),
           ),

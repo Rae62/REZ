@@ -1,13 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rez/account/Historique/orderHistory.dart';
 import 'package:rez/account/Paiement/payment.dart';
 import 'package:rez/account/Update/UpdateScreen.dart';
 import 'package:rez/additionalData/faq/faqList.dart';
 import 'package:rez/additionalData/mentions_légales/mentionslist.dart';
+import 'package:rez/outSourcing/navArrow.dart';
 
 class BodyProfile extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,13 +16,26 @@ class BodyProfile extends StatelessWidget {
               height: 175,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/images/profilepic.png'),
+                    image: AssetImage('assets/profilepic.png'),
                     fit: BoxFit.cover),
               ),
               child: Container(
                 padding: EdgeInsets.all(15),
                 child: Stack(
                   children: [
+                    AppBar(
+                        elevation: 0,
+                        backgroundColor: Color.fromARGB(0, 247, 246, 248),
+                        shadowColor: Colors.grey,
+                        title: Text(
+                          'Mot de passe oublié',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        ),
+                        iconTheme: const IconThemeData(
+                          color: Colors.white,
+                        ),
+                        centerTitle: true),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
@@ -43,10 +55,14 @@ class BodyProfile extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text('Jane Doe',
-                                  style: TextStyle(color: Colors.white)),
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.bold)),
                               Text(
                                 'janedoe@gmail.com',
-                                style: TextStyle(color: Colors.white),
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),
                                 textAlign: TextAlign.end,
                                 textDirection: TextDirection.rtl,
                               )

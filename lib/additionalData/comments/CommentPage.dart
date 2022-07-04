@@ -43,7 +43,7 @@ class _CommentPageState extends State<CommentPage> {
         padding: EdgeInsets.all(32),
         child: Column(
           children: <Widget>[
-            Arrow(arrowText: 'Commentaires'),
+            NavArrow(arrowText: 'Commentaires'),
             SizedBox(
               height: 20,
             ),

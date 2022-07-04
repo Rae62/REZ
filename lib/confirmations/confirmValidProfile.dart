@@ -28,7 +28,7 @@ class _ConfirmValidProfilState extends State<ConfirmValidProfil> {
                     width: 80,
                     height: 80,
                     child: FloatingActionButton(
-                      backgroundColor: Color.fromARGB(255, 253, 64, 89),
+                      backgroundColor: Color.fromARGB(255, 239, 113, 90),
                       onPressed: () {},
                       child: Icon(
                         Icons.check,

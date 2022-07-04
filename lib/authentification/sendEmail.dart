@@ -40,16 +40,16 @@ class _SendEmailState extends State<SendEmail> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 234, 232, 232),
+      backgroundColor: Color.fromARGB(255, 247, 246, 248),
       body: Center(
         child: Container(
           padding: EdgeInsets.all(32),
           child: Center(
             child: Column(
               children: [
-                Arrow(arrowText: 'Mot de passe oublié'),
+                NavArrow(arrowText: 'Mot de passe oublié'),
                 Container(
-                  margin: EdgeInsets.only(top: 80),
+                  margin: EdgeInsets.only(top: 220),
                   child: TextField(
                       controller: username,
                       style: TextStyle(fontSize: 20),
@@ -61,6 +61,7 @@ class _SendEmailState extends State<SendEmail> {
                         focusedBorder: myfocusborder(),
                       )),
                 ),
+                SizedBox(height: 20),
                 Button(buttonText: 'Valider'),
               ],
             ),

@@ -17,6 +17,7 @@ TabBar(
       unselectedLabelColor: Color.fromARGB(255, 111, 115, 118),
       indicatorColor: Color.fromARGB(255, 239, 113, 90),
       isScrollable: true,
+      //  controller: controller,
       indicatorWeight: 4,
       labelStyle: TextStyle(fontSize: 16),
       tabs: const <Widget>[

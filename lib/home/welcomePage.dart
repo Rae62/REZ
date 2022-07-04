@@ -9,7 +9,7 @@ class WelcomePage extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("images/rezBackground.png"),
+            image: AssetImage("assets/rezBackground.jpg"),
             fit: BoxFit.cover,
           ),
         ),
@@ -21,14 +21,14 @@ class WelcomePage extends StatelessWidget {
           child: Column(
             children: [
               DelayedAnimation(
-                delay: 1500,
+                delay: 1000,
                 child: Container(
                   height: 170,
-                  child: Image.asset('images/rezLogo.png'),
+                  child: Image.asset('assets/rezLogo.png'),
                 ),
               ),
               DelayedAnimation(
-                delay: 3500,
+                delay: 1700,
                 child: Container(
                   margin: EdgeInsets.only(
                     top: 30,
@@ -44,13 +44,12 @@ class WelcomePage extends StatelessWidget {
                 ),
               ),
               DelayedAnimation(
-                delay: 4500,
+                delay: 2500,
                 child: Container(
                   alignment: Alignment.bottomCenter,
                   width: double.infinity,
                   height: 400,
-                  child:
-                    Button(buttonText: 'GET STARTED'),
+                  child: Button(buttonText: 'GET STARTED'),
                 ),
               ),
             ],
