@@ -8,7 +8,7 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       
-      body: BodyProfile(),
+      body: ProfileScreen(),
     );
   }
 }

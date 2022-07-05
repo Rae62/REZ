@@ -1,34 +1,42 @@
 import 'package:flutter/material.dart';
-
-import 'package:rez/outSourcing/bottomBar.dart';
+import 'package:rez/outSourcing/button.dart';
 import 'package:rez/outSourcing/header.dart';
-import 'package:rez/outSourcing/tabBar.dart';
+import 'package:rez/restaurant/dishs/oneWidgetPlat.dart';
 
 import '../../models/declarationValues.dart';
 import '../../data/data.dart' as data;
-import 'oneWidgetPlat.dart';
 
-
-class CallWidgetPlat extends StatefulWidget {
+class RestoDetail extends StatefulWidget {
   final List<ToDo> tovisit = data.tovisit;
 
   @override
-  State<CallWidgetPlat> createState() => _CallWidgetPlatState();
+  State<RestoDetail> createState() => _RestoDetailState();
 }
 
-class _CallWidgetPlatState extends State<CallWidgetPlat>
+class _RestoDetailState extends State<RestoDetail>
     with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    TabController controller =
-        new TabController(initialIndex: 0, length: 4, vsync: this);
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 234, 232, 232),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             Header(),
-            TabBarResto(),
+             SizedBox(height: 20),
+            Button(buttonText: 'Réserver ma place'),
+            SizedBox(height: 20),
+            Container(
+              padding: EdgeInsets.only(right: 345),
+              child: Text(
+                'MENU',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
             Container(
               child: ListView.builder(
                   physics: NeverScrollableScrollPhysics(),
@@ -43,7 +51,6 @@ class _CallWidgetPlatState extends State<CallWidgetPlat>
           ],
         ),
       ),
-      bottomNavigationBar: BottomBar(),
     );
   }
 }

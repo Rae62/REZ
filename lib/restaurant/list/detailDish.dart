@@ -1,12 +1,14 @@
-import 'package:flutter/material.dart';
-import 'package:rez/models/declarationValues.dart';
 
-class OneWidgetMenu extends StatelessWidget {
+import 'package:flutter/material.dart';
+
+import '../../models/declarationValues.dart';
+
+
+class DetailDish extends StatelessWidget {
   // attributs
-   
   final ToDo todo;
- 
-  OneWidgetMenu({required this.todo});
+
+  DetailDish({required this.todo});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class OneWidgetMenu extends StatelessWidget {
                 image: DecorationImage(
                   fit: BoxFit.contain,
                   alignment: Alignment.centerLeft,
-                  image: NetworkImage(todo.image),
+                  image: NetworkImage(todo.imagePlat),
                 ),
               ),
             ),
@@ -47,16 +49,7 @@ class OneWidgetMenu extends StatelessWidget {
               // mainAxisAlignment: MainAxisAlignment.start,
               // crossAxisAlignment: CrossAxisAlignment.center,
             ),
-            Container(
-              child: IconButton(
-                icon: Icon(
-                  Icons.shopping_cart,
-                  color: Color.fromARGB(255, 239, 113, 90),
-                ),
-                color: Colors.grey,
-                onPressed: () {},
-              ),
-            ),
+            
           ],
         ),
       ),
