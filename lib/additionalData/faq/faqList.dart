@@ -115,27 +115,31 @@ class _FaqListState extends State<FaqList> {
             itemBuilder: (context, index) {
               final info = infos[index];
               return Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
-                  child: ListTile(
-                      contentPadding: EdgeInsets.fromLTRB(30, 25, 30, 25),
-                      title: Text(
-                        info.title,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.grey[800],
-                        ),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20))),
+                child: ListTile(
+                  contentPadding: EdgeInsets.fromLTRB(30, 25, 30, 25),
+                  title: Text(
+                    info.title,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey[800],
+                    ),
+                  ),
+                  subtitle: Text(info.description),
+                  trailing: Icon(
+                    Icons.arrow_forward_ios_outlined,
+                    color: Colors.orange[900],
+                  ),
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => InfoPage(info: info),
                       ),
-                      subtitle: Text(info.description),
-                      trailing: Icon(
-                        Icons.arrow_forward_ios_outlined,
-                        color: Colors.orange[900],
-                      ),
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => InfoPage(info: info),
-                        ));
-                      }));
+                    );
+                  },
+                ),
+              );
             }));
   }
 }

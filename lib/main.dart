@@ -24,6 +24,8 @@ import 'package:rez/restaurant/dishs/choicePlat.dart';
 import 'package:rez/restaurant/list/listEvent.dart';
 import 'package:rez/restaurant/list/listMenu.dart';
 import 'package:rez/restaurant/list/listResto.dart';
+import 'package:rez/restaurant/list/restoDetail.dart';
+import 'package:rez/restaurant/list/detailDish.dart';
 import 'package:rez/restaurant/widgetList.dart';
 import 'package:rez/additionalData/booking/bookingSummary.dart';
 
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProfileScreen(),
+      home: CallWidgetResto(),
     );
   }
 }
