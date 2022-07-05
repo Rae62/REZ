@@ -1,6 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:rez/account/Historique/orderHistory.dart';
 import 'package:rez/account/Historique/restoCard.dart';
+import 'package:rez/account/Paiement/payment.dart';
 import 'package:rez/account/ProfileScreen.dart';
 import 'package:rez/account/Update/BodyUpdate.dart';
 import 'package:rez/account/bodyProfile.dart';
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProfileScreen(),
+      home: OrderHistory(),
     );
   }
 }

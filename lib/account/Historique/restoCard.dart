@@ -58,6 +58,9 @@ class RestoCard extends StatelessWidget {
                         'Cuisine Française',
                         style: TextStyle(fontSize: 18),
                       ),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Row(
                         children: [
                           RatingBar.builder(
