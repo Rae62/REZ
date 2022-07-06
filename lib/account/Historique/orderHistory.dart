@@ -18,7 +18,7 @@ class _OrderHistoryState extends State<OrderHistory> {
         child: Container(
           child: Column(
             children: [
-              NavArrow(arrowText: 'Historique'),
+              NavArrow(arrowText: 'Historique  '),
               RestoCard(),
             ],
           ),
