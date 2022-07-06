@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rez/outSourcing/button.dart';
 import 'package:rez/outSourcing/header.dart';
+import 'package:rez/outSourcing/navArrow.dart';
 import 'package:rez/restaurant/dishs/oneWidgetPlat.dart';
 
 import '../../models/declarationValues.dart';
@@ -22,6 +23,7 @@ class _RestoDetailState extends State<RestoDetail>
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
+            NavArrow(arrowText: 'Mot de passe oublié'),
             Header(),
              SizedBox(height: 20),
             Button(buttonText: 'Réserver ma place'),
