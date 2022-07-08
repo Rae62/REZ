@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rez/outSourcing/button.dart';
+import 'package:rez/outSourcing/buttonWhite.dart';
+import 'package:rez/outSourcing/navArrow.dart';
 
 class BodyUpdate extends StatelessWidget {
   const BodyUpdate({Key? key}) : super(key: key);
@@ -22,70 +24,40 @@ class ProfileMenu extends StatefulWidget {
 }
 
 class _ProfileMenuState extends State<ProfileMenu> {
-  TextField firstnameText = new TextField(
-    decoration: InputDecoration(
-      hintText: 'Doe',
-      contentPadding: EdgeInsets.all(8.0),
-      filled: true,
-      fillColor: Color.fromARGB(255, 213, 218, 222),
-      border: OutlineInputBorder(
-          borderSide: BorderSide.none, borderRadius: BorderRadius.circular(6)),
-    ),
-  );
-  TextField lastnameText = new TextField(
-    decoration: InputDecoration(
-      hintText: 'Jane',
-      contentPadding: EdgeInsets.all(8.0),
-      filled: true,
-      fillColor: Color.fromARGB(255, 213, 218, 222),
-      border: OutlineInputBorder(
-          borderSide: BorderSide.none, borderRadius: BorderRadius.circular(6)),
-    ),
-  );
-  TextField telText = new TextField(
-    decoration: InputDecoration(
-      hintText: '00.00.00.00.00',
-      contentPadding: EdgeInsets.all(8.0),
-      filled: true,
-      fillColor: Color.fromARGB(255, 213, 218, 222),
-      border: OutlineInputBorder(
-          borderSide: BorderSide.none, borderRadius: BorderRadius.circular(6)),
-    ),
-  );
-  TextField mailText = new TextField(
-    decoration: InputDecoration(
-      hintText: 'janedoe@gmail.com',
-      contentPadding: EdgeInsets.all(8.0),
-      filled: true,
-      fillColor: Color.fromARGB(255, 213, 218, 222),
-      border: OutlineInputBorder(
-          borderSide: BorderSide.none, borderRadius: BorderRadius.circular(6)),
-    ),
-  );
-  TextField passwordText = new TextField(
-    obscureText: true,
-    decoration: InputDecoration(
-      hintText: '••••••••',
-      contentPadding: EdgeInsets.all(8.0),
-      filled: true,
-      fillColor: Color.fromARGB(255, 213, 218, 222),
-      border: OutlineInputBorder(
-          borderSide: BorderSide.none, borderRadius: BorderRadius.circular(6)),
-    ),
-  );
+
+OutlineInputBorder myinputborder() {
+    //return type is OutlineInputBorder
+    return OutlineInputBorder(
+      //Outline border type for TextFeild
+      borderRadius: BorderRadius.all(Radius.circular(10)),
+      borderSide: BorderSide(
+        color: Colors.redAccent,
+        width: 2,
+      ),
+    );
+  }
+
+  OutlineInputBorder myfocusborder() {
+    return OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+        borderSide: BorderSide(
+          color: Colors.blueAccent,
+          width: 2,
+        ));
+  }
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.only(top: 25),
-        
+        padding: EdgeInsets.all(30),
         child: ListView(
           scrollDirection: Axis.vertical,
           shrinkWrap: true,
           children: [
             Center(
-                child: Stack(
+              child: Column(
               children: <Widget>[
                 Container(
                   height: 130,
@@ -108,32 +80,94 @@ class _ProfileMenuState extends State<ProfileMenu> {
                           image: NetworkImage(
                               'https://images.unsplash.com/photo-1438761681033-6461ffad8d80'))),
                 ),
-                Button(buttonText: 'Modifier la photo'),
-                SizedBox(
-                  height: 200,
+                SizedBox(height: 20),
+                Container(
+                  child: ElevatedButton(
+                    onPressed: () => {},
+                    child: Text('Modifier la photo',
+                    style: TextStyle(color: Colors.white,fontSize: 16.0,),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(10.0),
+                    ),
+                      primary: Color.fromARGB(255, 239, 113, 90),
+                      minimumSize: Size(200, 40)),
+                  ),
                 ),
+                SizedBox(height: 30),
               ],
             )),
             Column(
               children: [
-                Text('Nom'),
-                lastnameText,
-                SizedBox(height: 15),
-                Text('Prénom'),
-                firstnameText,
-                SizedBox(height: 15),
-                Text('Tel'),
-                telText,
-                SizedBox(height: 15),
-                Text('Email'),
-                mailText,
-                SizedBox(height: 15),
-                Text('Mot de passe'),
-                passwordText,
-                SizedBox(height: 15),
-                Button(buttonText: 'Modifier les informations'),
-                SizedBox(height: 15),
-                Button(buttonText: 'Supprimer mon compte'),
+                Container(
+                  child: TextField(
+                    style: TextStyle(fontSize: 20),
+                    decoration: InputDecoration(
+                      labelText: "Nom",
+                      prefixIcon: Icon(Icons.people),
+                      border: myinputborder(),
+                      enabledBorder: myinputborder(),
+                      focusedBorder: myfocusborder(),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 10),
+                Container(
+                  child: TextField(
+                    style: TextStyle(fontSize: 20),
+                    decoration: InputDecoration(
+                      labelText: "Prenom",
+                      prefixIcon: Icon(Icons.people),
+                      border: myinputborder(),
+                      enabledBorder: myinputborder(),
+                      focusedBorder: myfocusborder(),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 10),
+                Container(
+                  child: TextField(
+                    style: TextStyle(fontSize: 20),
+                    decoration: InputDecoration(
+                      labelText: "Tel",
+                      prefixIcon: Icon(Icons.phone),
+                      border: myinputborder(),
+                      enabledBorder: myinputborder(),
+                      focusedBorder: myfocusborder(),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 10),
+                Container(
+                  child: TextField(
+                    style: TextStyle(fontSize: 20),
+                    decoration: InputDecoration(
+                      labelText: "Email",
+                      prefixIcon: Icon(Icons.mail),
+                      border: myinputborder(),
+                      enabledBorder: myinputborder(),
+                      focusedBorder: myfocusborder(),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 10),
+                Container(
+                  child: TextField(
+                    style: TextStyle(fontSize: 20),
+                    decoration: InputDecoration(
+                      labelText: "Mot de passe",
+                      prefixIcon: Icon(Icons.password),
+                      border: myinputborder(),
+                      enabledBorder: myinputborder(),
+                      focusedBorder: myfocusborder(),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                Button(buttonText: 'Modifier les information'),
+                SizedBox(height: 10),
+                ButtonWhite(buttonText: 'Supprimer mon compte'),
               ],
             ),
           ],

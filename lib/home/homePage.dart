@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:rez/home/widgetList.dart';
 import 'package:rez/home/widgetOffer.dart';
+import 'package:rez/outSourcing/bottomBar.dart';
+import 'package:rez/restaurant/list/listEvent.dart';
+import 'package:rez/restaurant/list/listMenu.dart';
+import 'package:rez/restaurant/list/listResto.dart';
 
-class Home extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,8 +26,8 @@ class Home extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               // input bar de recherche
-              Padding(
-                padding: const EdgeInsets.fromLTRB(5, 50, 5, 8),
+              const Padding(
+                padding: EdgeInsets.fromLTRB(5, 50, 5, 8),
                 child: TextField(
                   decoration: InputDecoration(
                       labelText: "Votre recherche…",
@@ -58,7 +69,7 @@ class Home extends StatelessWidget {
                               width: 60,
                               child: Image.asset('assets/pizza_icon.png'),
                             ),
-                            Text(
+                            const Text(
                               "PIZZA",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -76,7 +87,7 @@ class Home extends StatelessWidget {
                               width: 60,
                               child: Image.asset('assets/sushi_icon.png'),
                             ),
-                            Text(
+                            const Text(
                               "SUSHI",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -94,7 +105,7 @@ class Home extends StatelessWidget {
                               width: 60,
                               child: Image.asset('assets/pizza_icon.png'),
                             ),
-                            Text(
+                            const Text(
                               "PIZZA",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -112,7 +123,7 @@ class Home extends StatelessWidget {
                               width: 60,
                               child: Image.asset('assets/sushi_icon.png'),
                             ),
-                            Text(
+                            const Text(
                               "SUSHI",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -130,7 +141,7 @@ class Home extends StatelessWidget {
                               width: 60,
                               child: Image.asset('assets/pizza_icon.png'),
                             ),
-                            Text(
+                            const Text(
                               "PIZZA",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -148,7 +159,7 @@ class Home extends StatelessWidget {
                               width: 60,
                               child: Image.asset('assets/sushi_icon.png'),
                             ),
-                            Text(
+                            const Text(
                               "SUSHI",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -163,15 +174,43 @@ class Home extends StatelessWidget {
               // liste Widget : Resttaurant, Menu, Evenement
               Flexible(
                 child: ListView(
-                  padding: EdgeInsets.only(top: 20, bottom: 50),
+                  padding: EdgeInsets.only(top: 20, bottom: 20),
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   children: <Widget>[
-                    WidgetList(
-                        name: 'RESTAURANT', image: 'assets/widget_resto.jpg'),
-                    WidgetList(name: 'MENU', image: 'assets/widget_menu.jpg'),
-                    WidgetList(
-                        name: 'EVENEMENT', image: 'assets/widget_event.jpg'),
+                    InkWell(
+                      child: WidgetList(
+                          name: 'RESTAURANT', image: 'assets/widget_resto.jpg'),
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => CallWidgetResto(),
+                          ),
+                        );
+                      },
+                    ),
+                    InkWell(
+                      child: WidgetList(
+                          name: 'MENU', image: 'assets/widget_menu.jpg'),
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => CallWidgetMenu(),
+                          ),
+                        );
+                      },
+                    ),
+                    InkWell(
+                      child: WidgetList(
+                          name: 'EVENEMENT', image: 'assets/widget_event.jpg'),
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => CallWidgetEvent(),
+                          ),
+                        );
+                      },
+                    ),
                   ],
                 ),
               )
@@ -179,6 +218,7 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
+      // bottomNavigationBar: BottomBar(),
     );
   }
 }

@@ -5,6 +5,7 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(child: Text("Cart Page"));
+    return Container(
+        margin: EdgeInsets.only(top: 50), child: Text("Cart Page"));
   }
 }

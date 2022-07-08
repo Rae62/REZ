@@ -16,8 +16,10 @@ import 'package:rez/authentification/register.dart';
 import 'package:rez/authentification/sendEmail.dart';
 import 'package:rez/confirmations/confirmPaiement.dart';
 import 'package:rez/confirmations/confirmSendEmail.dart';
+import 'package:rez/home/homePage.dart';
 import 'package:rez/home/welcomePage.dart';
 import 'package:rez/home/widgetList.dart';
+import 'package:rez/navPages/MenuPage.dart';
 import 'package:rez/restaurant/dishs/choiceBeverage.dart';
 import 'package:rez/restaurant/dishs/choiceDessert.dart';
 import 'package:rez/restaurant/dishs/choiceEntree.dart';
@@ -39,7 +41,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: RestoDetail(),
+      home: ChoicePlaces(),
     );
   }
 }

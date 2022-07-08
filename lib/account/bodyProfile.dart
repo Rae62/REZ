@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:rez/account/Historique/orderHistory.dart';
+import 'package:rez/account/Paiement/addCard.dart';
 import 'package:rez/account/Paiement/payment.dart';
 import 'package:rez/account/Update/UpdateScreen.dart';
+import 'package:rez/account/favorites/Favorites.dart';
 import 'package:rez/additionalData/faq/faqList.dart';
 import 'package:rez/additionalData/mentions_légales/mentionslist.dart';
 import 'package:rez/outSourcing/navArrow.dart';
@@ -16,8 +18,8 @@ class BodyProfile extends StatelessWidget {
               height: 175,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/profilepic.png'),
-                    fit: BoxFit.cover),
+                image: AssetImage('assets/profilepic.png'),
+                fit: BoxFit.cover),
               ),
               child: Container(
                 padding: EdgeInsets.all(15),
@@ -30,9 +32,9 @@ class BodyProfile extends StatelessWidget {
                         title: Text(
                           'Mot de passe oublié',
                           style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
+                          color: Colors.white, fontWeight: FontWeight.bold),
                         ),
-                        iconTheme: const IconThemeData(
+                          iconTheme: const IconThemeData(
                           color: Colors.white,
                         ),
                         centerTitle: true),
@@ -75,100 +77,156 @@ class BodyProfile extends StatelessWidget {
                 ),
               )),
           SizedBox(height: 10),
-          ProfileMenu(
-            text: "Mon profil",
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => UpdateScreen(),
+          Card(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20))),
+            child: ListTile(
+              contentPadding: EdgeInsets.fromLTRB(30, 25, 30, 25),
+              title: Text(
+                "Mon profil",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey[800],
                 ),
-              );
-            },
+              ),
+              trailing: Icon(
+                Icons.arrow_forward_ios_outlined,
+                color: Colors.orange[900],
+              ),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => UpdateScreen(),
+                  ),
+                );
+              },
+            ),
           ),
-          Divider(
-            height: 20,
-            thickness: 1,
-            indent: 20,
-            endIndent: 30,
-            color: Colors.black,
-          ),
-          ProfileMenu(
-            text: "Paiement",
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => Paiement(),
+          Card(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20))),
+            child: ListTile(
+              contentPadding: EdgeInsets.fromLTRB(30, 25, 30, 25),
+              title: Text(
+                "Paiement",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey[800],
                 ),
-              );
-            },
+              ),
+              trailing: Icon(
+                Icons.arrow_forward_ios_outlined,
+                color: Colors.orange[900],
+              ),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => AddCard(),
+                  ),
+                );
+              },
+            ),
           ),
-          Divider(
-            height: 20,
-            thickness: 1,
-            indent: 20,
-            endIndent: 30,
-            color: Colors.black,
-          ),
-          ProfileMenu(
-              text: "Historique des commandes",
-              press: () {
-                Navigator.push(
-                  context,
+          Card(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20))),
+            child: ListTile(
+              contentPadding: EdgeInsets.fromLTRB(30, 25, 30, 25),
+              title: Text(
+                "Historique des commandes",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey[800],
+                ),
+              ),
+              trailing: Icon(
+                Icons.arrow_forward_ios_outlined,
+                color: Colors.orange[900],
+              ),
+              onTap: () {
+                Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => OrderHistory(),
                   ),
                 );
-              }),
-          Divider(
-            height: 20,
-            thickness: 1,
-            indent: 20,
-            endIndent: 30,
-            color: Colors.black,
+              },
+            ),
           ),
-          ProfileMenu(text: "Favoris", press: () {}),
-          Divider(
-            height: 20,
-            thickness: 1,
-            indent: 20,
-            endIndent: 30,
-            color: Colors.black,
+          Card(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20))),
+            child: ListTile(
+              contentPadding: EdgeInsets.fromLTRB(30, 25, 30, 25),
+              title: Text(
+                "Favoris",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey[800],
+                ),
+              ),
+              trailing: Icon(
+                Icons.arrow_forward_ios_outlined,
+                color: Colors.orange[900],
+              ),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => Favorites(),
+                                          // a changer
+                  ),
+                );
+              },
+            ),
           ),
-          ProfileMenu(
-              text: "Mentions Légales",
-              press: () {
-                Navigator.push(
-                  context,
+          Card(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20))),
+            child: ListTile(
+              contentPadding: EdgeInsets.fromLTRB(30, 25, 30, 25),
+              title: Text(
+                "Mentions légales",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey[800],
+                ),
+              ),
+              trailing: Icon(
+                Icons.arrow_forward_ios_outlined,
+                color: Colors.orange[900],
+              ),
+              onTap: () {
+                Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => MentionsList(),
                   ),
                 );
-              }),
-          Divider(
-            height: 20,
-            thickness: 1,
-            indent: 20,
-            endIndent: 30,
-            color: Colors.black,
+              },
+            ),
           ),
-          ProfileMenu(
-              text: "F.A.Q",
-              press: () {
-                Navigator.push(
-                  context,
+          Card(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20))),
+            child: ListTile(
+              contentPadding: EdgeInsets.fromLTRB(30, 25, 30, 25),
+              title: Text(
+                "F.A.Q",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey[800],
+                ),
+              ),
+              trailing: Icon(
+                Icons.arrow_forward_ios_outlined,
+                color: Colors.orange[900],
+              ),
+              onTap: () {
+                Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => FaqList(),
                   ),
                 );
-              }),
-          Divider(
-            height: 20,
-            thickness: 1,
-            indent: 20,
-            endIndent: 30,
-            color: Colors.black,
+              },
+            ),
           ),
           ButtonLogout(),
         ],

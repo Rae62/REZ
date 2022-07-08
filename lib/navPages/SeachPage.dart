@@ -6,9 +6,6 @@ class SearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text(
-        "Search Page"
-      )
-    );
+        margin: EdgeInsets.only(top: 50), child: Text("Search Page"));
   }
 }
