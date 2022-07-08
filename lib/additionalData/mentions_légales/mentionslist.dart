@@ -51,6 +51,18 @@ class _MentionsListState extends State<MentionsList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Color.fromARGB(255, 247, 246, 248),
+        shadowColor: Colors.grey,
+        title: Text(
+          "Mentions légales",
+          style: TextStyle(color: Colors.black),
+        ),
+        iconTheme: IconThemeData(
+          color: Colors.black,
+        ),
+        centerTitle: true),
         body: ListView.builder(
             itemCount: infos.length,
             itemBuilder: (context, index) {

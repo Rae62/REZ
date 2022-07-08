@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rez/outSourcing/navArrow.dart';
 
 class InfoPage extends StatelessWidget {
   final info;
@@ -14,6 +15,7 @@ class InfoPage extends StatelessWidget {
             margin: const EdgeInsets.fromLTRB(30, 30, 30, 30),
             child: Column(
               children: <Widget>[
+                NavArrow(arrowText: 'F.A.Q'),
                 Image.network(
                   info.urlImage,
                   height: 200,

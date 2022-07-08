@@ -103,7 +103,7 @@ class _FaqListState extends State<FaqList> {
             backgroundColor: Color.fromARGB(255, 247, 246, 248),
             shadowColor: Colors.grey,
             title: Text(
-              "Mentions légales",
+              "F.A.Q",
               style: TextStyle(color: Colors.black),
             ),
             iconTheme: IconThemeData(
