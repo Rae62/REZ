@@ -51,7 +51,7 @@ OutlineInputBorder myinputborder() {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.all(30),
+        padding: EdgeInsets.fromLTRB(30, 0, 30, 30),
         child: ListView(
           scrollDirection: Axis.vertical,
           shrinkWrap: true,

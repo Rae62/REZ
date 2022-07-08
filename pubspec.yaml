@@ -34,6 +34,8 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   cached_network_image: ^3.2.1
+  flutter_neat_and_clean_calendar: ^0.3.0+12
+  syncfusion_flutter_calendar: ^20.2.36
 
 dev_dependencies:
   flutter_test:
