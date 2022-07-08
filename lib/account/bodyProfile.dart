@@ -6,6 +6,7 @@ import 'package:rez/account/Update/UpdateScreen.dart';
 import 'package:rez/account/favorites/Favorites.dart';
 import 'package:rez/additionalData/faq/faqList.dart';
 import 'package:rez/additionalData/mentions_légales/mentionslist.dart';
+import 'package:rez/outSourcing/button.dart';
 import 'package:rez/outSourcing/navArrow.dart';
 
 class BodyProfile extends StatelessWidget {
@@ -18,26 +19,13 @@ class BodyProfile extends StatelessWidget {
               height: 175,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                image: AssetImage('assets/profilepic.png'),
-                fit: BoxFit.cover),
+                    image: AssetImage('assets/profilepic.png'),
+                    fit: BoxFit.cover),
               ),
               child: Container(
                 padding: EdgeInsets.all(15),
                 child: Stack(
                   children: [
-                    AppBar(
-                        elevation: 0,
-                        backgroundColor: Color.fromARGB(0, 247, 246, 248),
-                        shadowColor: Colors.grey,
-                        title: Text(
-                          'Mot de passe oublié',
-                          style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
-                        ),
-                          iconTheme: const IconThemeData(
-                          color: Colors.white,
-                        ),
-                        centerTitle: true),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
@@ -48,7 +36,7 @@ class BodyProfile extends StatelessWidget {
                             alignment: Alignment.bottomLeft,
                           ),
                           backgroundImage: NetworkImage(
-                              'https://images.unsplash.com/photo-1438761681033-6461ffad8d80'),
+                              'https://expertphotography.b-cdn.net/wp-content/uploads/2020/05/photo-of-woman-wearing-yellow.jpg'),
                         ),
                         Container(
                           padding: EdgeInsets.all(10),
@@ -77,158 +65,167 @@ class BodyProfile extends StatelessWidget {
                 ),
               )),
           SizedBox(height: 10),
-          Card(
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20))),
-            child: ListTile(
-              contentPadding: EdgeInsets.fromLTRB(30, 25, 30, 25),
-              title: Text(
-                "Mon profil",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey[800],
-                ),
-              ),
-              trailing: Icon(
-                Icons.arrow_forward_ios_outlined,
-                color: Colors.orange[900],
-              ),
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => UpdateScreen(),
+          Container(
+            margin: EdgeInsets.all(10),
+            child: Column(
+              children: [
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                  child: ListTile(
+                   contentPadding: EdgeInsets.fromLTRB(30, 8, 30, 8),
+                    title: Text(
+                      "Mon profil",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey[800],
+                      ),
+                    ),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios_outlined,
+                      color: Colors.orange[900],
+                    ),
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => UpdateScreen(),
+                        ),
+                      );
+                    },
                   ),
-                );
-              },
+                ),
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                  child: ListTile(
+                  contentPadding: EdgeInsets.fromLTRB(30, 8, 30, 8),
+                    title: Text(
+                      "Paiement",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey[800],
+                      ),
+                    ),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios_outlined,
+                      color: Colors.orange[900],
+                    ),
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => AddCard(),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                  child: ListTile(
+                  contentPadding: EdgeInsets.fromLTRB(30, 8, 30, 8),
+                    title: Text(
+                      "Historique des commandes",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey[800],
+                      ),
+                    ),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios_outlined,
+                      color: Colors.orange[900],
+                    ),
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => OrderHistory(),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                  child: ListTile(
+                  contentPadding: EdgeInsets.fromLTRB(30, 8, 30, 8),
+                    title: Text(
+                      "Favoris",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey[800],
+                      ),
+                    ),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios_outlined,
+                      color: Colors.orange[900],
+                    ),
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => Favorites(),
+                          // a changer
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                  child: ListTile(
+                  contentPadding: EdgeInsets.fromLTRB(30, 8, 30, 8),
+                    title: Text(
+                      "Mentions légales",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey[800],
+                      ),
+                    ),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios_outlined,
+                      color: Colors.orange[900],
+                    ),
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => MentionsList(),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                  child: ListTile(
+                  contentPadding: EdgeInsets.fromLTRB(30, 8, 30, 8),
+                    title: Text(
+                      "F.A.Q",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey[800],
+                      ),
+                    ),
+                    trailing: Icon(
+                      Icons.arrow_forward_ios_outlined,
+                      color: Colors.orange[900],
+                    ),
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => FaqList(),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                SizedBox(height: 10,),
+                Button(buttonText: 'Déconnexion'),
+              ],
             ),
           ),
-          Card(
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20))),
-            child: ListTile(
-              contentPadding: EdgeInsets.fromLTRB(30, 25, 30, 25),
-              title: Text(
-                "Paiement",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey[800],
-                ),
-              ),
-              trailing: Icon(
-                Icons.arrow_forward_ios_outlined,
-                color: Colors.orange[900],
-              ),
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => AddCard(),
-                  ),
-                );
-              },
-            ),
-          ),
-          Card(
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20))),
-            child: ListTile(
-              contentPadding: EdgeInsets.fromLTRB(30, 25, 30, 25),
-              title: Text(
-                "Historique des commandes",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey[800],
-                ),
-              ),
-              trailing: Icon(
-                Icons.arrow_forward_ios_outlined,
-                color: Colors.orange[900],
-              ),
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => OrderHistory(),
-                  ),
-                );
-              },
-            ),
-          ),
-          Card(
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20))),
-            child: ListTile(
-              contentPadding: EdgeInsets.fromLTRB(30, 25, 30, 25),
-              title: Text(
-                "Favoris",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey[800],
-                ),
-              ),
-              trailing: Icon(
-                Icons.arrow_forward_ios_outlined,
-                color: Colors.orange[900],
-              ),
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => Favorites(),
-                                          // a changer
-                  ),
-                );
-              },
-            ),
-          ),
-          Card(
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20))),
-            child: ListTile(
-              contentPadding: EdgeInsets.fromLTRB(30, 25, 30, 25),
-              title: Text(
-                "Mentions légales",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey[800],
-                ),
-              ),
-              trailing: Icon(
-                Icons.arrow_forward_ios_outlined,
-                color: Colors.orange[900],
-              ),
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => MentionsList(),
-                  ),
-                );
-              },
-            ),
-          ),
-          Card(
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20))),
-            child: ListTile(
-              contentPadding: EdgeInsets.fromLTRB(30, 25, 30, 25),
-              title: Text(
-                "F.A.Q",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey[800],
-                ),
-              ),
-              trailing: Icon(
-                Icons.arrow_forward_ios_outlined,
-                color: Colors.orange[900],
-              ),
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => FaqList(),
-                  ),
-                );
-              },
-            ),
-          ),
-          ButtonLogout(),
+          
         ],
       ),
     );

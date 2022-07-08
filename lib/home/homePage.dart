@@ -26,32 +26,39 @@ class _HomePageState extends State<HomePage> {
             mainAxisSize: MainAxisSize.min,
             children: [
               // input bar de recherche
-              const Padding(
-                padding: EdgeInsets.fromLTRB(5, 50, 5, 8),
-                child: TextField(
-                  decoration: InputDecoration(
-                      labelText: "Votre recherche…",
-                      hintText: "Votre recherche…",
-                      contentPadding: EdgeInsets.all(2),
-                      // prefixIcon : Une icône qui apparaît avant le préfixe ou le texte préfixe et avant la partie modifiable du champ de texte, dans le conteneur de la décoration.
-                      prefixIcon: Icon(Icons.search,
-                          color: Color.fromARGB(255, 239, 113, 90)),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10)))),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 10),
+                child: const Padding(
+                  padding: EdgeInsets.fromLTRB(5, 50, 5, 8),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        labelText: "Votre recherche…",
+                        hintText: "Votre recherche…",
+                        contentPadding: EdgeInsets.all(2),
+                        // prefixIcon : Une icône qui apparaît avant le préfixe ou le texte préfixe et avant la partie modifiable du champ de texte, dans le conteneur de la décoration.
+                        prefixIcon: Icon(Icons.search,
+                            color: Color.fromARGB(255, 239, 113, 90)),
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10)))),
+                  ),
                 ),
               ),
               // widget offre : Obtenez....
-              Flexible(
-                child: ListView(
-                  padding: EdgeInsets.only(bottom: 20),
-                  physics: NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  children: <Widget>[
-                    WidgetOffer(
-                        title: 'Obtenez 5€',
-                        subtitle: 'Pour votre prochaine commande',
-                        image: 'assets/onglet_offre.jpg'),
-                  ],
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 10),
+                child: Flexible(
+                  child: ListView(
+                    padding: EdgeInsets.only(bottom: 20),
+                    physics: NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    children: <Widget>[
+                      WidgetOffer(
+                          title: 'Obtenez 5€',
+                          subtitle: 'Pour votre prochaine commande',
+                          image: 'assets/onglet_offre.jpg'),
+                    ],
+                  ),
                 ),
               ),
               // liste scroll horizontal des filtres : pizza, sushi....
@@ -172,46 +179,51 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               // liste Widget : Resttaurant, Menu, Evenement
-              Flexible(
-                child: ListView(
-                  padding: EdgeInsets.only(top: 20, bottom: 20),
-                  physics: NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  children: <Widget>[
-                    InkWell(
-                      child: WidgetList(
-                          name: 'RESTAURANT', image: 'assets/widget_resto.jpg'),
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => CallWidgetResto(),
-                          ),
-                        );
-                      },
-                    ),
-                    InkWell(
-                      child: WidgetList(
-                          name: 'MENU', image: 'assets/widget_menu.jpg'),
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => CallWidgetMenu(),
-                          ),
-                        );
-                      },
-                    ),
-                    InkWell(
-                      child: WidgetList(
-                          name: 'EVENEMENT', image: 'assets/widget_event.jpg'),
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => CallWidgetEvent(),
-                          ),
-                        );
-                      },
-                    ),
-                  ],
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 10),
+                child: Flexible(
+                  child: ListView(
+                    padding: EdgeInsets.only(top: 20, bottom: 20),
+                    physics: NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    children: <Widget>[
+                      InkWell(
+                        child: WidgetList(
+                            name: 'RESTAURANT',
+                            image: 'assets/widget_resto.jpg'),
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => CallWidgetResto(),
+                            ),
+                          );
+                        },
+                      ),
+                      InkWell(
+                        child: WidgetList(
+                            name: 'MENU', image: 'assets/widget_menu.jpg'),
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => CallWidgetMenu(),
+                            ),
+                          );
+                        },
+                      ),
+                      InkWell(
+                        child: WidgetList(
+                            name: 'EVENEMENT',
+                            image: 'assets/widget_event.jpg'),
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => CallWidgetEvent(),
+                            ),
+                          );
+                        },
+                      ),
+                    ],
+                  ),
                 ),
               )
             ],
