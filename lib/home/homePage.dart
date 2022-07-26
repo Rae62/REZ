@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
               // widget offre : Obtenez....
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 10),
-                child: Flexible(
+                child: Container(
                   child: ListView(
                     padding: EdgeInsets.only(bottom: 20),
                     physics: NeverScrollableScrollPhysics(),
@@ -181,7 +181,7 @@ class _HomePageState extends State<HomePage> {
               // liste Widget : Resttaurant, Menu, Evenement
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 10),
-                child: Flexible(
+                child: Container(
                   child: ListView(
                     padding: EdgeInsets.only(top: 20, bottom: 20),
                     physics: NeverScrollableScrollPhysics(),

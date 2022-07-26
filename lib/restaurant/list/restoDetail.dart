@@ -14,6 +14,7 @@ class RestoDetail extends StatefulWidget {
   State<RestoDetail> createState() => _RestoDetailState();
 }
 
+
 class _RestoDetailState extends State<RestoDetail>
     with TickerProviderStateMixin {
   @override
@@ -23,7 +24,7 @@ class _RestoDetailState extends State<RestoDetail>
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            NavArrow(arrowText: 'Mot de passe oublié'),
+            NavArrow(arrowText: ''),
             Header(),
              SizedBox(height: 20),
             Button(buttonText: 'Réserver ma place'),

@@ -16,7 +16,6 @@ class WidgetList extends StatelessWidget {
       ),
       clipBehavior: Clip.antiAlias,
       child: InkWell(
-        borderRadius: BorderRadius.circular(20),
         child: Container(
           height: 200,
           child: Stack(fit: StackFit.expand, children: <Widget>[

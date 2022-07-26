@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rez/models/declarationValues.dart';
-import 'package:rez/restaurant/list/advancedDetails.dart';
+import 'package:rez/restaurant/list/restoDetail.dart';
 
 class OneWidgetResto extends StatelessWidget {
   // attributs
@@ -12,7 +12,10 @@ class OneWidgetResto extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       child: Card(
-        margin: EdgeInsets.fromLTRB(10, 0, 10, 10),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+        margin: EdgeInsets.fromLTRB(15, 0, 15, 10),
         child: Container(
           padding: EdgeInsets.all(10),
           child: Row(
@@ -22,7 +25,7 @@ class OneWidgetResto extends StatelessWidget {
                 height: 100,
                 width: 150,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(13),
+                  borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
                     fit: BoxFit.contain,
                     alignment: Alignment.centerLeft,
@@ -32,7 +35,7 @@ class OneWidgetResto extends StatelessWidget {
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-    
+
                 children: [
                   Text(
                     todo.name,
@@ -44,7 +47,7 @@ class OneWidgetResto extends StatelessWidget {
                   ),
                   Text('4.7/5 (214 votes)'),
                 ],
-    
+
                 // mainAxisAlignment: MainAxisAlignment.start,
                 // crossAxisAlignment: CrossAxisAlignment.center,
               ),
@@ -63,12 +66,12 @@ class OneWidgetResto extends StatelessWidget {
         ),
       ),
       onTap: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => AdvancedDetails(todo: todo),
-            ),
-          );
-        },
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => RestoDetail(),
+          ),
+        );
+      },
     );
   }
 }

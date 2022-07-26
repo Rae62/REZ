@@ -20,7 +20,7 @@ class AdvancedDetails extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            NavArrow(arrowText: 'Mot de passe oublié'),
+            NavArrow(arrowText: ''),
             Header(),
              SizedBox(height: 20),
             Container(

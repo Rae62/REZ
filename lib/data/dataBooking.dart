@@ -2,7 +2,7 @@ import '../models/declarationValuesdataBooking.dart';
 
 List<ToDo> tovisit = [
   ToDo(
-      name: 'Couscous merguez',
+      name: 'Couscous',
       price: '12',
       id: '1',
       ),
