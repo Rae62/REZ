@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:rez/outSourcing/bottomBar.dart';
 import 'package:rez/outSourcing/button.dart';
-import 'package:rez/outSourcing/delayed_animation.dart';
+import 'package:rez/outSourcing/delayedAnimation.dart';
 
 class WelcomePage extends StatelessWidget {
   @override

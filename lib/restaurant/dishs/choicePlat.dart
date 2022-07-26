@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:rez/outSourcing/bottomBar.dart';
 import 'package:rez/outSourcing/header.dart';
 import 'package:rez/outSourcing/tabBar.dart';
+import 'package:rez/restaurant/dishs/dishsWidgets/oneWidgetPlat.dart';
 
 import '../../models/declarationValues.dart';
 import '../../data/data.dart' as data;
-import 'oneWidgetPlat.dart';
 
 
 class CallWidgetPlat extends StatefulWidget {

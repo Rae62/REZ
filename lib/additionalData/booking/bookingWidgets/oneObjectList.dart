@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../models/declarationValuesdataBooking.dart';
+import '../../../models/declarationValuesDataBooking.dart';
 
 class OneObjectList extends StatelessWidget {
   // attributs

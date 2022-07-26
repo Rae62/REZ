@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:rez/outSourcing/bottomBar.dart';
 import 'package:rez/outSourcing/header.dart';
 import 'package:rez/outSourcing/tabBar.dart';
+import 'package:rez/restaurant/dishs/dishsWidgets/oneWidgetBeverage.dart';
 
 import '../../models/declarationValues.dart';
 import 'package:rez/data/data.dart' as data;
 
-import 'oneWidgetBeverage.dart';
+
 
 class CallWidgetBoisson extends StatefulWidget {
   final List<ToDo> tovisit = data.tovisit;

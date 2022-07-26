@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:rez/account/favorites/favorite_card.dart';
+import 'package:rez/account/favorites/favoriteWidgets/favoriteCard.dart';
 import 'package:rez/models/todoModel.dart';
 import 'package:rez/outSourcing/navArrow.dart';
 import 'package:rez/outSourcing/tabBarFavorites.dart';
-import 'package:rez/data/data-favoris.dart' as data;
+import 'package:rez/data/dataFavorites.dart' as data;
 
 class Favorites extends StatefulWidget {
   final List tovisit = data.tovisit;

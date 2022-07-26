@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rez/outSourcing/button.dart';
 import 'package:rez/outSourcing/header.dart';
 import 'package:rez/outSourcing/navArrow.dart';
-import 'package:rez/restaurant/dishs/oneWidgetPlat.dart';
+import 'package:rez/restaurant/dishs/dishsWidgets/oneWidgetPlat.dart';
 
 import '../../models/declarationValues.dart';
 import '../../data/data.dart' as data;

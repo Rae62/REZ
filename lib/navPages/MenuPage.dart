@@ -1,9 +1,9 @@
 // import 'package:flutter/material.dart';
+// import 'package:rez/navPages/seachPage.dart';
 // import 'package:rez/restaurant/dishs/choicePlaces.dart';
 // import '../account/ProfileScreen.dart';
 // import 'package:rez/navPages/Calendar.dart';
 // import 'package:rez/navPages/Cart.dart';
-// import 'package:rez/navPages/SearchPage.dart';
 // import '../home/homePage.dart';
 
 // // import 'package:rezapp/nav_pages/user_item_page.dart';

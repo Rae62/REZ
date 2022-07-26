@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'bodyUpdate.dart';
+import '../bodyUpdate.dart';
 
 class UpdateScreen extends StatelessWidget {
   @override

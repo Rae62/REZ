@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/material/bottom_navigation_bar.dart';
-import 'package:rez/account/ProfileScreen.dart';
+import 'package:rez/account/profileScreen.dart';
 import 'package:rez/home/homePage.dart';
-import 'package:rez/navPages/Calendar.dart';
-import 'package:rez/navPages/Cart.dart';
-import 'package:rez/navPages/SeachPage.dart';
+import 'package:rez/navPages/calendar.dart';
+import 'package:rez/navPages/cart.dart';
+import 'package:rez/navPages/seachPage.dart';
 import 'package:rez/restaurant/dishs/choicePlaces.dart';
 
 class BottomBar extends StatefulWidget {

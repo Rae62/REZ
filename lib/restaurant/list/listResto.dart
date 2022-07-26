@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:rez/restaurant/list/oneWidgetResto.dart';
+import 'package:rez/restaurant/list/listWidgets/oneWidgetResto.dart';
 
 import '../../../models/declarationValues.dart';
 import 'package:rez/data/data.dart' as data;

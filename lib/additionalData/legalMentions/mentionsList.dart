@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rez/additionalData/mentions_légales/infopage.dart';
+import 'package:rez/additionalData/faq/infoPage.dart';
 
 class MentionsList extends StatefulWidget {
   @override

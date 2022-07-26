@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:rez/restaurant/list/listWidgets/oneWidgetEvent.dart';
 
 import '../../models/declarationValues.dart';
 import 'package:rez/data/data.dart' as data;
 
-import '../list/OneWidgetEvent.dart';
 
 class CallWidgetEvent extends StatefulWidget {
   final List<ToDo> tovisit = data.tovisit;

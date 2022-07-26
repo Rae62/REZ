@@ -1,8 +1,8 @@
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
-import 'package:rez/account/Historique/restoCard.dart';
 import 'package:rez/outSourcing/navArrow.dart';
+import 'package:rez/restaurant/dishs/dishsWidgets/restoCard.dart';
 
 class OrderHistory extends StatefulWidget {
   @override

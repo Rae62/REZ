@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../models/declarationValuesdataBooking.dart';
+import '../../models/declarationValuesDataBooking.dart';
 import '../../data/dataBooking.dart' as data;
-import './oneObjectList.dart';
+import 'bookingWidgets/oneObjectList.dart';
 // import '../../composants/bottomBar.dart';
 
 class BookingSummary extends StatefulWidget {

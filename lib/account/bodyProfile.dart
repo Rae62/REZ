@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:rez/account/Historique/orderHistory.dart';
-import 'package:rez/account/Paiement/addCard.dart';
-import 'package:rez/account/Paiement/payment.dart';
-import 'package:rez/account/Update/UpdateScreen.dart';
 import 'package:rez/account/favorites/Favorites.dart';
+import 'package:rez/account/history/orderHistory.dart';
+import 'package:rez/account/payment/paymentWidgets/addCard.dart';
+import 'package:rez/account/update/updateWidgets/updateScreen.dart';
 import 'package:rez/additionalData/faq/faqList.dart';
-import 'package:rez/additionalData/mentions_légales/mentionslist.dart';
+import 'package:rez/additionalData/legalMentions/mentionslist.dart';
 import 'package:rez/outSourcing/button.dart';
 import 'package:rez/outSourcing/navArrow.dart';
 

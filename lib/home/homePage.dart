@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rez/home/widgetList.dart';
-import 'package:rez/home/widgetOffer.dart';
+import 'package:rez/home/homeWidgets/widgetList.dart';
+import 'package:rez/home/homeWidgets/widgetOffer.dart';
 import 'package:rez/outSourcing/bottomBar.dart';
 import 'package:rez/restaurant/list/listEvent.dart';
 import 'package:rez/restaurant/list/listMenu.dart';
@@ -230,7 +230,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      // bottomNavigationBar: BottomBar(),
+      // bottomNavigationBar: const BottomBar(),
     );
   }
 }
